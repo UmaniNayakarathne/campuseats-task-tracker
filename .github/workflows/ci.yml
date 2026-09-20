@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["main", "feature/", "chore/"]
+    branches: ["main", "feature/**", "chore/**"]
 
   pull_request:
     branches: ["main"]
@@ -21,4 +21,4 @@ jobs:
       - name: Basic project check
         run: |
           echo "Running CI for CampusEats Task Tracker"
-          test -f README.md && echo "README found"
+          test -f README.md && echo "README found"  
